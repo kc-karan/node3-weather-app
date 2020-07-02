@@ -6,7 +6,7 @@ const weatherResult = document.querySelector('#weather-result');
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    let url = 'http://localhost:3000/weather?address=' + encodeURIComponent(weatherLocation.value);
+    let url = '/weather?address=' + encodeURIComponent(weatherLocation.value);
     fetch(url)
     .then((data) => {
         return data.json();
